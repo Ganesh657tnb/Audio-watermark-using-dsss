@@ -74,8 +74,6 @@ def extract_watermark_dsss(input_wav):
     spreading_factor = int(np.floor(total_samples / payload_length))
     
     # Define a threshold for detection (tune this based on observed noise/compression)
-    # Correlation must exceed this threshold to confirm detection.
-    # A value of ~10-20 is often a safe start for 16-bit audio with low alpha.
     detection_threshold = 15.0 
     
     if spreading_factor < 100:
@@ -187,16 +185,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-eof
-
-### Summary for Running the Detector
-
-1.  **Save the Code:** Save the content above as `dsss_detector.py`.
-2.  **Dependencies:** Ensure you have the following installed in your environment:
-    * `streamlit`
-    * `numpy`
-    * **FFmpeg** (installed system-wide).
-3.  **Run:** Execute the app from your terminal:
-    ```bash
-
-    streamlit run dsss_detector.py
