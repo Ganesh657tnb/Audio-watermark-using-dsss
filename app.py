@@ -187,7 +187,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
 eof
 
 ### Summary for Running the Detector
@@ -199,4 +198,5 @@ eof
     * **FFmpeg** (installed system-wide).
 3.  **Run:** Execute the app from your terminal:
     ```bash
+
     streamlit run dsss_detector.py
